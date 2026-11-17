@@ -1,0 +1,94 @@
+{
+  "id": "community.neon_titles",
+  "name": "Neon titles",
+  "icon": "🌃",
+  "author": "ClipPolish community",
+  "version": 1,
+  "description": "A glowing title scene, a “neon fly-through” motion and a dark neon style pack for studio videos.",
+  "tags": [
+    "titles",
+    "neon",
+    "studio"
+  ],
+  "packs": [
+    {
+      "id": "community.neon_night",
+      "name": "Neon night",
+      "description": "Dark background, cyan and pink neon",
+      "paper": 4278913818,
+      "ink": 4294243576,
+      "accent": 4280472558,
+      "accent2": 4294921581
+    }
+  ],
+  "templates": [
+    {
+      "id": "neon_title",
+      "name": "Neon title",
+      "icon": "💡",
+      "durationMs": 4000,
+      "scene": {
+        "layout": "quote",
+        "background": {
+          "kind": "SPOTLIGHT",
+          "color": 4278913818
+        },
+        "camera": {
+          "kind": "PUSH_IN",
+          "amount": 0.08
+        }
+      },
+      "elements": [
+        {
+          "id": "k",
+          "type": "KICKER",
+          "startUs": 0,
+          "endUs": 0,
+          "slot": "tag",
+          "text": "EPISODE 1",
+          "design": "chip"
+        },
+        {
+          "id": "t",
+          "type": "TEXT",
+          "startUs": 250000,
+          "endUs": 0,
+          "slot": "title",
+          "text": "The *big* idea",
+          "enter": {
+            "kind": "WIPE_UP",
+            "durationMs": 600
+          },
+          "style": {
+            "size": 0.11,
+            "glow": 0.6
+          }
+        }
+      ]
+    }
+  ],
+  "motions": [
+    {
+      "id": "community.neon_fly",
+      "name": "Neon fly-through",
+      "description": "Grows through the screen and fades out",
+      "stretch": true,
+      "keys": [
+        {
+          "t": 0,
+          "scale": 0.85,
+          "opacity": 0
+        },
+        {
+          "t": 850000,
+          "scale": 1.15
+        },
+        {
+          "t": 1000000,
+          "scale": 1.3,
+          "opacity": 0
+        }
+      ]
+    }
+  ]
+}

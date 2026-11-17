@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0B0B12">
+  <meta name="description" content="Plugins for ClipPolish: effects, particles, titles, colour looks and automation. Install them on your phone with one tap.">
+  <title>ClipPolish plugins</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%A8%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">✨</span>
+        <div>
+          <h1 id="site-name">ClipPolish plugins</h1>
+          <p id="site-description" class="muted">Effects, particles, titles, colour looks and automation for ClipPolish.</p>
+        </div>
+      </div>
+      <div class="search">
+        <label for="q" class="visually-hidden">Search plugins</label>
+        <input id="q" type="search" placeholder="Search plugins, tags, authors…" autocomplete="off" spellcheck="false">
+      </div>
+      <nav id="categories" class="chips" aria-label="Kinds"></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p id="install-hint" class="hint" hidden>
+      Open this page on your Android phone to install with one tap. On a computer: download a plugin, copy it to the
+      phone, then in ClipPolish go to <b>Plugins → File</b>.
+    </p>
+    <p id="status" class="status" role="status">Loading plugins…</p>
+    <section id="grid" class="grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="wrap foot">
+    <h2>Add this website in the app</h2>
+    <p class="muted">
+      In ClipPolish open <b>Plugins → Get more plugins → + Website</b> and paste this link. The app then shows these
+      plugins with Install and Update buttons.
+    </p>
+    <div class="copy-row">
+      <code id="index-url">index.json</code>
+      <button id="copy-index" class="btn ghost small" type="button">Copy link</button>
+    </div>
+    <p class="muted small">
+      Plugins are data, not apps: they can't read your files or go online. The app always shows what a plugin contains
+      and where it comes from, and asks before installing it.
+    </p>
+  </footer>
+
+  <template id="card-template">
+    <article class="card">
+      <div class="card-preview" hidden><img alt="" loading="lazy"></div>
+      <div class="card-head">
+        <span class="icon" aria-hidden="true"></span>
+        <div class="titles">
+          <h3 class="name"></h3>
+          <p class="meta muted"></p>
+        </div>
+      </div>
+      <p class="kinds"></p>
+      <p class="desc"></p>
+      <ul class="contents" aria-label="What it contains"></ul>
+      <p class="requires" hidden></p>
+      <div class="tags"></div>
+      <div class="actions">
+        <a class="btn primary install">Install in ClipPolish</a>
+        <a class="btn ghost download">Download</a>
+        <button class="btn ghost copy" type="button">Copy link</button>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>

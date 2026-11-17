@@ -1,0 +1,78 @@
+{
+  "id": "community.neon_fx",
+  "name": "Neon FX",
+  "icon": "💡",
+  "author": "ClipPolish community",
+  "version": 1,
+  "description": "A glowing neon edge for any element, a jelly wobble you can drop on titles and stickers, and a snappy “whip” easing curve.",
+  "tags": [
+    "effects",
+    "neon",
+    "motion"
+  ],
+  "effects": [
+    {
+      "id": "community.neon_edge",
+      "name": "Neon edge",
+      "description": "Glowing outline around the element's shape",
+      "category": "stylize",
+      "margin": 0.02,
+      "inputs": [
+        {
+          "name": "strength",
+          "type": "float",
+          "label": "Strength",
+          "default": [
+            2.0
+          ],
+          "min": 0,
+          "max": 6
+        },
+        {
+          "name": "tint",
+          "type": "color",
+          "label": "Colour",
+          "default": [
+            0.2,
+            1.0,
+            0.9,
+            1.0
+          ]
+        }
+      ],
+      "glsl": "vec4 effect(vec2 uv) { vec2 t = 1.0 / uSize; float e = length(vec2(src(uv + vec2(t.x,0.0)).a - src(uv - vec2(t.x,0.0)).a, src(uv + vec2(0.0,t.y)).a - src(uv - vec2(0.0,t.y)).a)); vec4 o = src(uv); return o + vec4(tint.rgb, 1.0) * clamp(e * strength, 0.0, 1.0) * (1.0 - o.a * 0.5); }"
+    }
+  ],
+  "behaviors": [
+    {
+      "id": "community.jelly",
+      "name": "Jelly",
+      "description": "Squishes in and settles, like jelly",
+      "inputs": [
+        {
+          "name": "wobble",
+          "label": "Wobble",
+          "default": [
+            0.08
+          ],
+          "max": 0.3
+        }
+      ],
+      "tracks": {
+        "scaleX": {
+          "expr": "value * (1 + wobble*sin(time*12)*exp(-time*3))"
+        },
+        "scaleY": {
+          "expr": "value * (1 - wobble*sin(time*12)*exp(-time*3))"
+        }
+      }
+    }
+  ],
+  "eases": [
+    {
+      "id": "community.whip",
+      "name": "Whip",
+      "curve": "cubic(0.7,0,0,1)"
+    }
+  ]
+}

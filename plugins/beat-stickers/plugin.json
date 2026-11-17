@@ -1,0 +1,85 @@
+{
+  "id": "community.beat_stickers",
+  "name": "Beat stickers",
+  "icon": "🎵",
+  "author": "ClipPolish community",
+  "version": 1,
+  "description": "A sticker pack (star, sparkle, heart and a pulsing ring), a walkie-talkie sound preset and a “Beat flash” effect that moves with the music.",
+  "tags": [
+    "stickers",
+    "music",
+    "audio-reactive"
+  ],
+  "stickers": [
+    {
+      "id": "community.beat_pack",
+      "name": "Beat",
+      "icon": "🎵",
+      "description": "Stickers that like music. Try Bounce or Pulse as their loop.",
+      "stickers": [
+        {
+          "id": "star",
+          "name": "Star",
+          "file": "stickers/star.png",
+          "tags": ["star"],
+          "size": 0.25,
+          "loop": { "kind": "PULSE" }
+        },
+        {
+          "id": "sparkle",
+          "name": "Sparkle",
+          "file": "stickers/sparkle.png",
+          "size": 0.18,
+          "enter": { "kind": "POP", "durationMs": 350 },
+          "loop": { "kind": "SPIN", "speed": 0.5 }
+        },
+        {
+          "id": "heart",
+          "name": "Heart",
+          "file": "stickers/heart.svg",
+          "size": 0.22,
+          "loop": { "kind": "HEARTBEAT" }
+        },
+        {
+          "id": "pulse_ring",
+          "name": "Pulse ring",
+          "file": "stickers/pulse.json",
+          "size": 0.4,
+          "durationMs": 2000,
+          "enter": { "kind": "FADE", "durationMs": 150 }
+        }
+      ]
+    }
+  ],
+  "audioFx": [
+    {
+      "id": "community.walkie",
+      "name": "Walkie-talkie",
+      "icon": "📻",
+      "description": "Crackly two-way radio",
+      "chain": [
+        { "type": "highpass", "params": { "freq": 500 } },
+        { "type": "lowpass", "params": { "freq": 2800 } },
+        { "type": "distortion", "params": { "drive": 0.4, "mix": 0.6 } },
+        { "type": "compressor", "params": { "threshold": -22, "ratio": 6, "makeup": 5 } }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "community.beat_flash",
+      "name": "Beat flash",
+      "description": "Flashes on every beat and splits the colours with the bass (audio-reactive)",
+      "category": "light",
+      "margin": 0.02,
+      "animated": true,
+      "inputs": [
+        { "name": "flash", "type": "float", "label": "Flash", "default": [0.6], "min": 0, "max": 1 },
+        { "name": "shift", "type": "float", "label": "Colour split", "default": [0.5], "min": 0, "max": 2 },
+        { "name": "boost", "type": "float", "label": "Brighter when loud", "default": [0.3], "min": 0, "max": 1 },
+        { "name": "tint", "type": "color", "label": "Flash colour", "default": [1.0, 0.95, 0.8, 1.0] }
+      ],
+      "glsl": "vec4 effect(vec2 uv) {\n    float bass = (uBands[0] + uBands[1] + uBands[2]) / 3.0;\n    vec2 d = (uv - 0.5) * shift * bass * 0.05;\n    vec4 c = src(uv);\n    vec4 r = src(uv + d);\n    vec4 b = src(uv - d);\n    float a = max(c.a, max(r.a, b.a));\n    vec3 col = vec3(r.r, c.g, b.b);\n    col = mix(col, tint.rgb * a, uBeat.y * flash * 0.5);\n    col *= 1.0 + uAudio.x * boost;\n    return vec4(min(col, vec3(a)), a);\n}"
+    }
+  ]
+}

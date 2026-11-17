@@ -1,0 +1,54 @@
+{
+  "id": "community.tap_tutorial",
+  "name": "Tap tutorial",
+  "icon": "👆",
+  "author": "ClipPolish community",
+  "version": 1,
+  "description": "For screen recordings: zooms in on every tap, outlines the tapped button and adds a “Tap …” caption. Runs only when you apply it (or turn on “Run on every new recording”).",
+  "tags": [
+    "recordings",
+    "tutorial",
+    "automation"
+  ],
+  "rules": [
+    {
+      "id": "taps",
+      "name": "Zoom and caption taps",
+      "trigger": "TAP",
+      "minGapMs": 800,
+      "actions": [
+        {
+          "type": "ZOOM",
+          "beforeMs": 500,
+          "afterMs": 1300
+        },
+        {
+          "type": "HIGHLIGHT",
+          "beforeMs": 150,
+          "afterMs": 1000,
+          "style": "OUTLINE"
+        },
+        {
+          "type": "CAPTION",
+          "beforeMs": 150,
+          "afterMs": 2000,
+          "text": "Tap “{label}”"
+        }
+      ]
+    },
+    {
+      "id": "screens",
+      "name": "Chapter per screen",
+      "trigger": "SCREEN",
+      "minGapMs": 1500,
+      "actions": [
+        {
+          "type": "CHAPTER",
+          "beforeMs": 0,
+          "afterMs": 0,
+          "text": "{screen}"
+        }
+      ]
+    }
+  ]
+}

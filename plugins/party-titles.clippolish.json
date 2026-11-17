@@ -1,0 +1,82 @@
+{
+  "id": "community.party_titles",
+  "name": "Party titles",
+  "icon": "🎉",
+  "author": "ClipPolish community",
+  "version": 1,
+  "description": "A celebration title scene with confetti and glowing text. Builds on Particle pack and Neon titles: install those first.",
+  "tags": [
+    "titles",
+    "particles",
+    "party"
+  ],
+  "requires": {
+    "app": "0.1.1",
+    "plugins": [
+      "community.particle_pack@1",
+      "community.neon_titles@1"
+    ]
+  },
+  "templates": [
+    {
+      "id": "party_title",
+      "name": "Party title",
+      "icon": "🎉",
+      "durationMs": 4000,
+      "scene": {
+        "layout": "quote",
+        "background": {
+          "kind": "SPOTLIGHT",
+          "color": 4279502891
+        }
+      },
+      "elements": [
+        {
+          "id": "fx",
+          "type": "PARTICLES",
+          "design": "emitter",
+          "startUs": 0,
+          "endUs": 0,
+          "box": {
+            "left": 0.3,
+            "top": 0.55,
+            "right": 0.7,
+            "bottom": 0.6
+          },
+          "params": {
+            "count": 160,
+            "burst": 1,
+            "life": 3,
+            "angle": -90,
+            "spread": 140,
+            "speed": 0.9,
+            "speedVar": 0.6,
+            "gravity": 0.9,
+            "drag": 1.6,
+            "size": 0.016,
+            "spin": 360,
+            "spinVar": 1,
+            "palette": 1,
+            "fadeOut": 0.2
+          }
+        },
+        {
+          "id": "t",
+          "type": "TEXT",
+          "startUs": 200000,
+          "endUs": 0,
+          "slot": "title",
+          "text": "Let's *celebrate*",
+          "enter": {
+            "kind": "POP",
+            "durationMs": 600
+          },
+          "style": {
+            "size": 0.11,
+            "glow": 0.5
+          }
+        }
+      ]
+    }
+  ]
+}

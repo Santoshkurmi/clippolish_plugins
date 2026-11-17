@@ -1,0 +1,318 @@
+{
+  "id": "clippolish.free_sounds",
+  "name": "Free sound pack",
+  "icon": "🔊",
+  "author": "ClipPolish",
+  "version": 1,
+  "kind": "SFX",
+  "description": "30 short sounds for edits: whooshes, risers, impacts, pops, clicks, dings, typing, a camera shutter, a cash register, boing, slide whistles and more. Made from scratch by ClipPolish (synthesised, no samples): free to use in any video.",
+  "tags": [
+    "sounds",
+    "sfx",
+    "transitions",
+    "comedy",
+    "free"
+  ],
+  "sounds": [
+    {
+      "id": "whoosh_air",
+      "name": "Air whoosh",
+      "file": "sounds/whoosh_air.m4a",
+      "category": "whoosh",
+      "tags": [
+        "transition",
+        "whoosh"
+      ]
+    },
+    {
+      "id": "whoosh_fast",
+      "name": "Fast whoosh",
+      "file": "sounds/whoosh_fast.m4a",
+      "category": "whoosh",
+      "tags": [
+        "transition",
+        "whoosh"
+      ]
+    },
+    {
+      "id": "swipe",
+      "name": "Swipe",
+      "file": "sounds/swipe.m4a",
+      "category": "whoosh",
+      "tags": [
+        "transition",
+        "ui"
+      ]
+    },
+    {
+      "id": "swish_double",
+      "name": "Double swish",
+      "file": "sounds/swish_double.m4a",
+      "category": "whoosh",
+      "tags": [
+        "transition"
+      ]
+    },
+    {
+      "id": "zip",
+      "name": "Zip",
+      "file": "sounds/zip.m4a",
+      "category": "whoosh",
+      "tags": [
+        "transition",
+        "comedy"
+      ]
+    },
+    {
+      "id": "riser_short",
+      "name": "Short riser",
+      "file": "sounds/riser_short.m4a",
+      "category": "riser",
+      "tags": [
+        "transition",
+        "build-up"
+      ]
+    },
+    {
+      "id": "riser_tension",
+      "name": "Tension riser",
+      "file": "sounds/riser_tension.m4a",
+      "category": "riser",
+      "tags": [
+        "transition",
+        "build-up"
+      ]
+    },
+    {
+      "id": "downlifter",
+      "name": "Downlifter",
+      "file": "sounds/downlifter.m4a",
+      "category": "riser",
+      "tags": [
+        "transition"
+      ]
+    },
+    {
+      "id": "boom",
+      "name": "Boom",
+      "file": "sounds/boom.m4a",
+      "category": "impact",
+      "tags": [
+        "impact",
+        "hit"
+      ]
+    },
+    {
+      "id": "punch",
+      "name": "Punch",
+      "file": "sounds/punch.m4a",
+      "category": "impact",
+      "tags": [
+        "impact",
+        "hit",
+        "comedy"
+      ]
+    },
+    {
+      "id": "click_soft",
+      "name": "Soft click",
+      "file": "sounds/click_soft.m4a",
+      "category": "ui",
+      "tags": [
+        "ui",
+        "click"
+      ]
+    },
+    {
+      "id": "tap",
+      "name": "Tap",
+      "file": "sounds/tap.m4a",
+      "category": "ui",
+      "tags": [
+        "ui",
+        "click"
+      ]
+    },
+    {
+      "id": "pop_bubble",
+      "name": "Bubble pop",
+      "file": "sounds/pop_bubble.m4a",
+      "category": "ui",
+      "tags": [
+        "ui",
+        "pop"
+      ]
+    },
+    {
+      "id": "pop_cork",
+      "name": "Cork pop",
+      "file": "sounds/pop_cork.m4a",
+      "category": "ui",
+      "tags": [
+        "pop",
+        "comedy"
+      ]
+    },
+    {
+      "id": "notify",
+      "name": "Notification",
+      "file": "sounds/notify.m4a",
+      "category": "alert",
+      "tags": [
+        "ui",
+        "alert"
+      ]
+    },
+    {
+      "id": "bell",
+      "name": "Bell",
+      "file": "sounds/bell.m4a",
+      "category": "alert",
+      "tags": [
+        "ding",
+        "alert"
+      ]
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "file": "sounds/success.m4a",
+      "category": "alert",
+      "tags": [
+        "ui",
+        "win"
+      ]
+    },
+    {
+      "id": "error",
+      "name": "Error",
+      "file": "sounds/error.m4a",
+      "category": "alert",
+      "tags": [
+        "ui",
+        "fail"
+      ]
+    },
+    {
+      "id": "coin",
+      "name": "Coin",
+      "file": "sounds/coin.m4a",
+      "category": "alert",
+      "tags": [
+        "game",
+        "win"
+      ]
+    },
+    {
+      "id": "cash",
+      "name": "Cash register",
+      "file": "sounds/cash.m4a",
+      "category": "real",
+      "tags": [
+        "money",
+        "win"
+      ]
+    },
+    {
+      "id": "typing",
+      "name": "Typing",
+      "file": "sounds/typing.m4a",
+      "category": "real",
+      "tags": [
+        "keyboard",
+        "tutorial"
+      ]
+    },
+    {
+      "id": "shutter",
+      "name": "Camera shutter",
+      "file": "sounds/shutter.m4a",
+      "category": "real",
+      "tags": [
+        "camera",
+        "photo"
+      ]
+    },
+    {
+      "id": "tick_tock",
+      "name": "Tick tock",
+      "file": "sounds/tick_tock.m4a",
+      "category": "real",
+      "tags": [
+        "clock",
+        "time"
+      ]
+    },
+    {
+      "id": "heartbeat",
+      "name": "Heartbeat",
+      "file": "sounds/heartbeat.m4a",
+      "category": "real",
+      "tags": [
+        "tension"
+      ]
+    },
+    {
+      "id": "boing",
+      "name": "Boing",
+      "file": "sounds/boing.m4a",
+      "category": "comedy",
+      "tags": [
+        "comedy",
+        "cartoon"
+      ]
+    },
+    {
+      "id": "slide_up",
+      "name": "Slide whistle up",
+      "file": "sounds/slide_up.m4a",
+      "category": "comedy",
+      "tags": [
+        "comedy",
+        "cartoon"
+      ]
+    },
+    {
+      "id": "slide_down",
+      "name": "Slide whistle down",
+      "file": "sounds/slide_down.m4a",
+      "category": "comedy",
+      "tags": [
+        "comedy",
+        "cartoon",
+        "fail"
+      ]
+    },
+    {
+      "id": "rimshot",
+      "name": "Ba-dum-tss",
+      "file": "sounds/rimshot.m4a",
+      "category": "comedy",
+      "tags": [
+        "comedy",
+        "joke",
+        "drums"
+      ]
+    },
+    {
+      "id": "honk",
+      "name": "Clown horn",
+      "file": "sounds/honk.m4a",
+      "category": "comedy",
+      "tags": [
+        "comedy",
+        "cartoon"
+      ]
+    },
+    {
+      "id": "glitch",
+      "name": "Glitch",
+      "file": "sounds/glitch.m4a",
+      "category": "impact",
+      "tags": [
+        "digital",
+        "transition"
+      ]
+    }
+  ]
+}

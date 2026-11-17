@@ -1,0 +1,88 @@
+{
+  "id": "community.badges",
+  "name": "Badges",
+  "icon": "🏷️",
+  "author": "ClipPolish community",
+  "version": 1,
+  "description": "A spinning starburst badge with your own label and colour. Edit the text and colour any time in the editor.",
+  "tags": [
+    "components",
+    "stickers",
+    "sale"
+  ],
+  "components": [
+    {
+      "id": "badge",
+      "name": "Badge",
+      "icon": "🏷️",
+      "description": "Starburst badge with a label",
+      "box": {
+        "left": 0.3,
+        "top": 0.4,
+        "right": 0.7,
+        "bottom": 0.6
+      },
+      "aspect": 1.0,
+      "inputs": [
+        {
+          "name": "label",
+          "type": "text",
+          "label": "Label",
+          "text": "NEW"
+        },
+        {
+          "name": "color",
+          "type": "color",
+          "label": "Colour",
+          "text": "#E63946"
+        },
+        {
+          "name": "spin",
+          "type": "float",
+          "label": "Spin",
+          "default": [
+            0
+          ],
+          "min": 0,
+          "max": 360
+        }
+      ],
+      "elements": [
+        {
+          "id": "bg",
+          "type": "SHAPE",
+          "design": "burst",
+          "startUs": 0,
+          "endUs": 0,
+          "box": {
+            "left": 0,
+            "top": 0,
+            "right": 1,
+            "bottom": 1
+          },
+          "tracks": {
+            "style.fill": {
+              "expr": "field.color"
+            },
+            "rotation": {
+              "expr": "param.spin*life"
+            }
+          }
+        },
+        {
+          "id": "txt",
+          "type": "TEXT",
+          "text": "{label}",
+          "startUs": 0,
+          "endUs": 0,
+          "box": {
+            "left": 0.15,
+            "top": 0.3,
+            "right": 0.85,
+            "bottom": 0.7
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "name": "ClipPolish community plugins",
+  "description": "Effects, particles, titles, colour looks and automation for ClipPolish. Plugins are data, not apps: safe to install.",
+  "plugins": [
+    {
+      "id": "clippolish.free_sounds",
+      "name": "Free sound pack",
+      "description": "30 short sounds for edits: whooshes, risers, impacts, pops, clicks, dings, typing, a camera shutter, a cash register, boing, slide whistles and more. Made from scratch by ClipPolish (synthesised, no samples): free to use in any video.",
+      "icon": "🔊",
+      "author": "ClipPolish",
+      "version": 1,
+      "tags": [
+        "sounds",
+        "sfx",
+        "transitions",
+        "comedy",
+        "free"
+      ],
+      "url": "plugins/free-sounds.clippolish.zip",
+      "kind": "SFX",
+      "contents": "30 sounds",
+      "counts": {
+        "sounds": 30
+      }
+    },
+    {
+      "id": "community.neon_fx",
+      "name": "Neon FX",
+      "description": "A glowing neon edge for any element, a jelly wobble you can drop on titles and stickers, and a snappy “whip” easing curve.",
+      "icon": "💡",
+      "author": "ClipPolish community",
+      "version": 1,
+      "tags": [
+        "effects",
+        "neon",
+        "motion"
+      ],
+      "url": "plugins/neon-fx.clippolish.json",
+      "contents": "1 effects · 1 behaviours · 1 eases",
+      "counts": {
+        "effects": 1,
+        "behaviors": 1,
+        "eases": 1
+      }
+    },
+    {
+      "id": "community.particle_pack",
+      "name": "Particle pack",
+      "description": "Six ready-made particle systems: rising embers, fireflies, falling leaves, floating hearts, a star burst and soft bokeh. Pick them in a Particles element.",
+      "icon": "✨",
+      "author": "ClipPolish community",
+      "version": 1,
+      "tags": [
+        "particles",
+        "vfx",
+        "seasonal"
+      ],
+      "url": "plugins/particle-pack.clippolish.json",
+      "contents": "6 particle presets",
+      "counts": {
+        "particles": 6
+      },
+      "requires": {
+        "app": "0.1.1"
+      }
+    },
+    {
+      "id": "community.badges",
+      "name": "Badges",
+      "description": "A spinning starburst badge with your own label and colour. Edit the text and colour any time in the editor.",
+      "icon": "🏷️",
+      "author": "ClipPolish community",
+      "version": 1,
+      "tags": [
+        "components",
+        "stickers",
+        "sale"
+      ],
+      "url": "plugins/badges.clippolish.json",
+      "contents": "1 components",
+      "counts": {
+        "components": 1
+      }
+    },
+    {
+      "id": "community.neon_titles",
+      "name": "Neon titles",
+      "description": "A glowing title scene, a “neon fly-through” motion and a dark neon style pack for studio videos.",
+      "icon": "🌃",
+      "author": "ClipPolish community",
+      "version": 1,
+      "tags": [
+        "titles",
+        "neon",
+        "studio"
+      ],
+      "url": "plugins/neon-titles.clippolish.json",
+      "contents": "1 styles · 1 templates · 1 motions",
+      "counts": {
+        "packs": 1,
+        "templates": 1,
+        "motions": 1
+      }
+    },
+    {
+      "id": "community.film_looks",
+      "name": "Film looks",
+      "description": "Two colour looks (3D LUTs): a warm film tone and a cool teal night. Use them with the Colour look effect, or on an adjustment layer to grade everything under it.",
+      "icon": "🎞️",
+      "author": "ClipPolish community",
+      "version": 1,
+      "tags": [
+        "looks",
+        "colour",
+        "lut"
+      ],
+      "url": "plugins/film-looks.clippolish.json",
+      "contents": "2 looks",
+      "counts": {
+        "luts": 2
+      }
+    },
+    {
+      "id": "community.beat_stickers",
+      "name": "Beat stickers",
+      "description": "A sticker pack (star, sparkle, heart and a pulsing ring), a walkie-talkie sound preset and a “Beat flash” effect that moves with the music.",
+      "icon": "🎵",
+      "author": "ClipPolish community",
+      "version": 1,
+      "tags": [
+        "stickers",
+        "music",
+        "audio-reactive"
+      ],
+      "url": "plugins/beat-stickers.clippolish.zip",
+      "kind": "COMBO",
+      "contents": "4 stickers · 1 sound presets · 1 effects",
+      "counts": {
+        "stickers": 1,
+        "audioFx": 1,
+        "effects": 1
+      }
+    },
+    {
+      "id": "community.tap_tutorial",
+      "name": "Tap tutorial",
+      "description": "For screen recordings: zooms in on every tap, outlines the tapped button and adds a “Tap …” caption. Runs only when you apply it (or turn on “Run on every new recording”).",
+      "icon": "👆",
+      "author": "ClipPolish community",
+      "version": 1,
+      "tags": [
+        "recordings",
+        "tutorial",
+        "automation"
+      ],
+      "url": "plugins/tap-tutorial.clippolish.json",
+      "contents": "2 rules",
+      "counts": {
+        "rules": 2
+      }
+    },
+    {
+      "id": "community.party_titles",
+      "name": "Party titles",
+      "description": "A celebration title scene with confetti and glowing text. Builds on Particle pack and Neon titles: install those first.",
+      "icon": "🎉",
+      "author": "ClipPolish community",
+      "version": 1,
+      "tags": [
+        "titles",
+        "particles",
+        "party"
+      ],
+      "url": "plugins/party-titles.clippolish.json",
+      "contents": "1 templates",
+      "counts": {
+        "templates": 1
+      },
+      "requires": {
+        "app": "0.1.1",
+        "plugins": [
+          "community.particle_pack@1",
+          "community.neon_titles@1"
+        ]
+      }
+    }
+  ]
+}
